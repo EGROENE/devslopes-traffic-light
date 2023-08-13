@@ -13,6 +13,14 @@ export const FunctionalTrafficLight = () => {
     }
   };
 
+  if (currentColor === "red") {
+    setTimeout(applyColorChange, 5000);
+  } else if (currentColor === "yellow") {
+    setTimeout(applyColorChange, 3000);
+  } else {
+    setTimeout(applyColorChange, 8000);
+  }
+
   const lights = [{ color: "red" }, { color: "yellow" }, { color: "green" }];
 
   return (
@@ -31,9 +39,7 @@ export const FunctionalTrafficLight = () => {
           ></div>
         ))}
       </div>
-      <button onClick={applyColorChange} className="next-state-button">
-        Next State
-      </button>
+      <button className="next-state-button">Next State</button>
     </div>
   );
 };
