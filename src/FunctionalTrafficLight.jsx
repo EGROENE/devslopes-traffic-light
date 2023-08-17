@@ -5,11 +5,11 @@ export const FunctionalTrafficLight = () => {
 
   const applyColorChange = () => {
     if (currentColor === "red") {
-      changeColor((currentColor = "green"));
+      changeColor("green");
     } else if (currentColor === "yellow") {
-      changeColor((currentColor = "red"));
+      changeColor("red");
     } else {
-      changeColor((currentColor = "yellow"));
+      changeColor("yellow");
     }
   };
 
